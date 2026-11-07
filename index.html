@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Ascents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="site-nav" aria-label="Main navigation">
+<div class="site-nav-brand">
+  <a class="site-nav-logo" href="#gallery" aria-label="Alpine Ascents home">
+    <img src="videos/b7229d1a-7750-412d-a8e1-f01bec504e52_removalai_preview.png" alt="Alpine Ascents">
+  </a>
+  <span class="visitor-counter" aria-label="Total site visits">
+    <img id="visitorCount" alt="Visitor count">
+  </span>
+  <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" aria-label="Open navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+<ul id="siteNavLinks">
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a  href="#blogs">Blogs</a></li>
+    <li><a href="#organization-clubs">Organization Clubs</a></li>
+    <li><a  href="#aboutus">About Us</a></li>
+    <li><a  href="#contactus">Contact Us</a></li>
+    <li><a href="#book-trip" id="bookTripLink">Book A Trip</a></li>
+</ul>
+ </nav>
+ <dialog id="authDialog" class="auth-dialog" aria-labelledby="authTitle">
+  <div class="auth-panel">
+    <button class="auth-close" id="authClose" type="button" aria-label="Close">&times;</button>
+    <h2 id="authTitle">Book a Trip</h2>
+    <p class="auth-note">Sign in or create an account to continue with your trip.</p>
+    <div id="authForms">
+      <div class="auth-mode-switch" aria-label="Account options">
+        <button id="showLogin" class="active" type="button">Log in</button>
+        <button id="showSignup" type="button">Sign up</button>
+      </div>
+      <form id="authForm">
+        <label id="nameField" class="auth-field" hidden>
+          <span>Name</span>
+          <input id="authName" name="name" autocomplete="name">
+        </label>
+        <label class="auth-field">
+          <span>Email</span>
+          <input id="authEmail" name="email" type="email" autocomplete="email" pattern="[A-Za-z0-9._%+\-]+@gmail[.]com" title="Enter an address ending in @gmail.com." required>
+        </label>
+        <div class="auth-field">
+          <label for="authPassword">Password</label>
+          <div class="password-input-wrap">
+            <input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="8" title="Enter at least 8 characters." required>
+            <button id="togglePassword" class="password-toggle" type="button" aria-controls="authPassword" aria-pressed="false">Show</button>
+          </div>
+        </div>
+        <button id="authSubmit" class="auth-submit" type="submit">Log in</button>
+      </form>
+    </div>
+    <div id="signedInView" hidden>
+      <p id="signedInMessage" class="auth-success" role="status">Logged in successfully.</p>
+      <button id="signOut" class="auth-submit" type="button">Log out</button>
+    </div>
+    <p id="authStatus" class="auth-status" role="status" aria-live="polite"></p>
+  </div>
+ </dialog>
+  <!-- Navbar end -->
+
+  <!-- Video Start -->
+<section class="video-section" aria-label="Featured video">
+  <video id="video" autoplay muted loop playsinline preload="metadata">
+    <source src="videos/v1.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</section>
+ <!-- Video End -->
+ <!-- Gallery Start -->
+ <div class="container">
+<div class="row"style="margin-top: 50px; ">
+    <div class="col-lg-6"><h3> <u style="color: #163D2B;" >Wellcome To Alpine Ascents</u>  </h3>
+    <p style="margin-top: 20px;"> <b>History</b> For 52 years, Alpine Ascents has inspired a passion for mountain exploration.
+Our journey began with a vision to make extraordinary adventures accessible.
+Over the decades, we have built a legacy of exploration and discovery.
+Our expeditions now span 32 countries worldwide.
+We have connected adventurers through unforgettable mountain experiences.
+Every journey reflects our commitment to safety and excellence.
+Our history is built on courage, teamwork, and determination.
+Today, we celebrate 52 years of adventure and achievement.</p></div>
+    <div class="col-lg-6"><P style="margin-top: 54px;">We aim to explore new destinations and create greater opportunities.
+Our future focuses on innovation and responsible mountaineering.
+We strive to make every expedition safer and more memorable.
+We are committed to protecting the natural beauty of the mountains.
+We continue to inspire the next generation of explorers.
+Our vision is to expand our global reach and impact.</P></div>
+</div><hr></div>
+<section class="inventions-section" aria-labelledby="inventions-heading">
+  <h1 id="inventions-heading" style="text-align: center; margin-top: 50px;"><u style="color: #163D2B;">New Inventions</u></h1>
+  <div class="container mt-4">
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="staff-card invention-card" tabindex="0">
+          <img src="videos/climbing-exoskeleton.png" class="staff-card-image" alt="Climber wearing a powered leg exoskeleton on rocky terrain">
+          <div class="staff-card-info">
+            <h6>AI-powered climbing exoskeleton</h6>
+            <p><strong>Benefits:</strong></p>
+            <ul class="invention-benefits">
+              <li>Helps reduce leg fatigue on long hikes.</li>
+              <li>Provides additional assistance on steep terrain.</li>
+              <li>Can help climbers conserve energy on demanding journeys.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="staff-card invention-card" tabindex="0">
+          <img src="videos/satellite-connected-jacket.png" class="staff-card-image" alt="Red mountain jacket and camping equipment in a remote landscape">
+          <div class="staff-card-info">
+            <h6>Satellite-connected smart jacket</h6>
+            <p><strong>Benefits:</strong></p>
+            <ul class="invention-benefits">
+              <li>Communication in isolated mountain regions.</li>
+              <li>Better contact between climbing teams.</li>
+              <li>Potentially faster emergency communication.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="staff-card invention-card" tabindex="0">
+          <img src="videos/delivery-mapping-drones.png" class="staff-card-image" alt="Supply drone flying over a high-altitude mountain camp">
+          <div class="staff-card-info">
+            <h6>High-altitude delivery and mapping drones</h6>
+            <p><strong>Benefits:</strong></p>
+            <ul class="invention-benefits">
+              <li>Deliver oxygen cylinders, ropes and supplies.</li>
+              <li>Reduce dangerous supply-carrying journeys.</li>
+              <li>Map glaciers and identify hazardous areas.</li>
+              <li>Support search-and-rescue operations.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="staff-card invention-card" tabindex="0">
+          <img src="videos/avalanche-air-supply-backpack.png" class="staff-card-image" alt="Avalanche air-supply device with breathing tubes">
+          <div class="staff-card-info">
+            <h6>Smart avalanche air-supply backpack</h6>
+            <p><strong>Benefits:</strong></p>
+            <ul class="invention-benefits">
+              <li>Supplies fresh air around the breathing area.</li>
+              <li>Helps reduce carbon dioxide build-up.</li>
+              <li>Does not require a mouthpiece.</li>
+              <li>Can extend the potential rescue window.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<h1 style="text-align: center; margin-top: 50px;"> <U style="color: #163D2B;" id="gallery">Gallery</U></h1>
+<div class="container mt-4">
+  <div id="galleryCarousel" class="carousel slide" data-bs-touch="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row g-3">
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/GALLERY1.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 1"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/Gallery 2.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 2"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/gallery3.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 3"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/gallery4.webp" class="d-block w-100 gallery-image" alt="Mountain gallery image 4"></div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row g-3">
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/gallery5.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 5"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/Gallery6.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 6"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/gallery 7.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 7"></div>
+          <div class="col-6 col-md-3 gallery-tile"><img src="videos/gallery 8.jpg" class="d-block w-100 gallery-image" alt="Mountain gallery image 8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Show images 1 to 4"></button>
+      <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Show images 5 to 8"></button>
+    </div>
+  </div>
+</div>
+          
+<div class="container mt-5">
+<div class="row mountain-feature">
+    <div class="col-lg-8 feature-image-column"><img src="videos/Various record.jpg"  alt="Snow-covered mountain peak at sunset" ></div>
+<div class="col-lg-4 feature-copy-column"><h3>Various Mountaineering Records</h3><p class="feature-teaser">Today we're taking a look at some of the greatest achievements in the history of modern alpine climbing, from pioneers of its early era to contemporary adventurers. These are presented in no particular order, though we'll kick off with a few of the early feats in the Alps that helped lay the groundwork for climbs.</p><p class="feature-more">Mountaineering has a rich history of extraordinary achievements and world records. Mount Everest, standing at 8,848.86 metres, is the highest mountain above sea level. Sir Edmund Hillary and Tenzing Norgay made the first confirmed successful ascent of Everest in 1953. Reinhold Messner became the first person to climb all 14 mountains above 8,000 metres without supplemental oxygen. Junko Tabei became the first woman to summit Mount Everest in 1975. Nirmal Purja completed all 14 eight-thousanders in just six months and six days in 2019. These achievements demonstrate courage, determination and exceptional mountaineering skills.</p><button class="feature-toggle" type="button" aria-expanded="false">Read more</button></div>
+</div>
+</div>
+<div class="container mt-5">
+<div class="row mountain-feature">
+    <div class="col-lg-8 order-lg-2 feature-image-column"><img src="videos/Hazard.jpg" alt="Steep glaciated mountain terrain"></div>
+<div class="col-lg-4 order-lg-1 feature-copy-column"><h3>HAZARDS</h3><p class="feature-teaser">Before we dive into the hazards of mountain climbing, let’s talk a bit about the lack of awareness. A lack of awareness could be due to overconfidence. Sometimes a little knowledge is more dangerous than no knowledge. You might think you know it all and fail to heed advice from people who might just know better.</p><p class="feature-more">Mountaineering involves several natural and environmental hazards that can put climbers' lives at risk. Avalanches are among the most dangerous threats, as large amounts of snow can suddenly slide down mountains. Rockfalls and landslides can cause serious injuries during climbing. Extreme cold, frostbite and hypothermia are common risks at high altitudes. Strong winds and sudden snowstorms can reduce visibility and make climbing difficult. Altitude sickness can occur when the body does not receive enough oxygen at high elevations. Crevasses and slippery ice surfaces can also lead to dangerous falls. Proper training, weather awareness and safety equipment help reduce these risks.</p><button class="feature-toggle" type="button" aria-expanded="false">Read more</button></div>
+</div>
+</div>
+<div class="container mt-5">
+<div class="row mountain-feature">
+    <div class="col-lg-8 feature-image-column"><img src="videos/Sheltering.jpg" alt="Mountain trail through a forest"></div>
+<div class="col-lg-4 feature-copy-column"><h3>SHELTERING</h3><p class="feature-teaser">Alpine shelters have been perched up in the mountains for generations, providing safe haven for climbers during inclement weather or simply a spot for day hikers to rest and enjoy the views. But the shelters of today are no longer basic structures resembling log cabins or metal sheds.</p><p class="feature-more">Sheltering is an important survival practice that protects mountaineers from harsh mountain weather and environmental conditions. Mountain shelters include expedition tents, mountain huts, caves and emergency bivouac shelters. These shelters protect climbers from heavy snowfall, strong winds, rain and extreme cold. A safe shelter should be established on stable ground, away from avalanche paths and falling rocks. Insulated sleeping bags and thermal blankets help maintain body heat. Climbers should carry emergency shelter equipment during long expeditions. Proper ventilation is important when using tents or portable heating equipment. Choosing a secure shelter can improve comfort, safety and survival during mountain expeditions.</p><button class="feature-toggle" type="button" aria-expanded="false">Read more</button></div>
+</div>
+</div>
+<div class="container mt-5">
+<div class="row mountain-feature">
+    <div class="col-lg-8 order-lg-2 feature-image-column"><img src="videos/type of mountaineering.jpg" alt="Road leading through a snowy mountain valley"></div>
+<div class="col-lg-4 order-lg-1 feature-copy-column"><h3>TYPES OF MOUNTAINEERING</h3><p class="feature-teaser">We've created the ultimate guide to the different types of climbing, covering 12 different styles, to help you understand what your buddy means when they talk about their new "deep water soloing project" and how that's different from Tommy Caldwell's latest big wall testpiece.</p><p class="feature-more">Mountaineering involves different types of climbing activities depending on the terrain, difficulty and environment. Alpine mountaineering involves climbing high mountains using different climbing skills and equipment. Rock climbing focuses on ascending steep rock surfaces using ropes and protective gear. Ice climbing involves climbing frozen waterfalls and icy mountain surfaces with special tools. Expedition mountaineering includes long journeys to remote and extremely high mountains. High-altitude trekking involves walking through mountainous regions at significant elevations. Mixed climbing combines rock, snow and ice climbing techniques. Each type requires physical fitness, technical knowledge, proper equipment and careful preparation.</p><button class="feature-toggle" type="button" aria-expanded="false">Read more</button></div>
+</div>
+</div>
+<div class="container mt-5">
+<div class="row mountain-feature">
+    <div class="col-lg-8 feature-image-column"><img src="videos/mountineering techniques.jpg" alt="Technical glacial mountain climbing terrain"></div>
+<div class="col-lg-4 feature-copy-column"><h3>CLIMBING TECHNIQUES</h3><p class="feature-teaser">It’s hard to overstate the importance of good technique. When you focus on technique, moves start to click into place and you find yourself floating up routes that used to be too difficult. This section covers some key concepts: Ways to use your feet. Ways to maintain balance. Ways to be more efficient.</p><p class="feature-more">Mountaineering techniques are essential skills that help climbers travel safely through difficult mountain environments. Rope handling and knot tying are important for securing climbers during challenging climbs. Belaying helps protect climbers by controlling the rope and reducing the risk of falling. Rappelling is a technique used to descend steep mountain surfaces with ropes. Ice axe techniques help climbers maintain balance and stop themselves from sliding on snow and ice. Crampons provide grip while walking or climbing on frozen surfaces. Navigation skills help mountaineers follow routes and avoid dangerous areas. Proper acclimatization, teamwork and weather assessment are also important for successful mountain expeditions.</p><button class="feature-toggle" type="button" aria-expanded="false">Read more</button></div>
+</div>
+</div>
+<center style="padding-top: 50px;"><h1><u style="color: #163D2B;" id="aboutus" >ABOUT US</u></h1></center>
+<div class="container">
+<h5 style="color: #A4B49A;">MOUNTAIN GUIDE STAFF:</h5>
+</div>
+
+<div class="container mt-4">
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <article class="staff-card" tabindex="0">
+        <img src="videos/staff1.jpg" class="staff-card-image" alt="James Anderson">
+        <div class="staff-card-info">
+          <h6>James Anderson</h6>
+          <p>James is an experienced mountaineer specializing in high-altitude expeditions across the Himalayas. He leads challenging climbs with a strong focus on safety, teamwork and preparation.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-6 col-md-3">
+      <article class="staff-card" tabindex="0">
+        <img src="videos/staff2.jpg" class="staff-card-image" alt="Sarah Mitchell">
+        <div class="staff-card-info">
+          <h6>Sarah Mitchell</h6>
+          <p>Sarah specializes in alpine climbing, glacier travel and technical mountain routes. She is passionate about helping climbers develop confidence and mountain skills.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-6 col-md-3">
+      <article class="staff-card" tabindex="0">
+        <img src="videos/staff3.jpg" class="staff-card-image" alt="Tenzing Sherpa">
+        <div class="staff-card-info">
+          <h6>Tenzing Sherpa</h6>
+          <p>Tenzing brings extensive Himalayan expedition experience, specializing in altitude acclimatization, route planning and technical climbing support.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-6 col-md-3">
+      <article class="staff-card" tabindex="0">
+        <img src="videos/staff4.jpg" class="staff-card-image" alt="Daniel Fischer">
+        <div class="staff-card-info">
+          <h6>Daniel Fischer</h6>
+          <p>Daniel specializes in rock climbing, ice climbing and technical alpine routes. He focuses on building safe, memorable experiences for climbers of different skill levels.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+<hr>
+</div>
+ <!-- gallery End -->
+ <!-- Organization Camps Success Stories Start -->
+<h1 style="text-align: center; margin-top: 50px;"><u style="color: #163D2B;">ORGANIZATION CAMPS SUCCESS STORIES</u></h1>
+<div class="container mt-4">
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-xl-3">
+      <article class="staff-card blog-card success-story-card" tabindex="0">
+        <img src="videos/organization-qaqlasht-winter-camp.png" class="staff-card-image" alt="Winter mountaineering camp in the snow-covered Qaqlasht Valley">
+        <div class="staff-card-info">
+          <h6>Qaqlasht Winter Mountaineering Camp – Chitral, Pakistan</h6>
+          <p><strong>Location:</strong> Qaqlasht Valley, Chitral, Pakistan<br><strong>Participants:</strong> 50<br><strong>Achievement:</strong> Nine participants successfully climbed a small peak.</p>
+          <p>The camp brought together 50 young participants from different regions of Pakistan for winter sports and basic mountaineering training. Under the guidance of experienced trainers, participants learned skiing, climbing techniques and essential rope knots. A team of nine participants, including four girls, successfully reached a nearby peak through steep, snow-covered terrain.</p>
+          <p><strong>Key outcomes:</strong> Practical climbing experience, confidence, teamwork and increased youth participation in winter sports.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <article class="staff-card blog-card success-story-card" tabindex="0">
+        <img src="videos/organization-thalo-zom-expedition.png" class="staff-card-image" alt="Snow-covered Thalo Zom mountain in the Hindu Raj range">
+        <div class="staff-card-info">
+          <h6>Thalo Zom Youth Expedition – Hindu Raj, Pakistan</h6>
+          <p><strong>Location:</strong> Hindu Raj Range, Pakistan<br><strong>Team:</strong> Nine young mountaineers<br><strong>Achievement:</strong> Successful ascent of Thalo Zom (6,050 m).</p>
+          <p>A team of nine young mountaineers from Chitral successfully reached the summit of Thalo Zom in July 2025. After comprehensive preparation and technical training, the climbers navigated glaciers, steep rock faces and challenging alpine terrain. Every member returned safely, making the expedition an important achievement for local mountaineering.</p>
+          <p><strong>Key outcomes:</strong> Technical climbing experience, self-reliance, leadership and stronger local mountaineering skills.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <article class="staff-card blog-card success-story-card" tabindex="0">
+        <img src="videos/organization-everest-three-passes.png" class="staff-card-image" alt="Everest Three Passes trekking team in the Himalayan mountains">
+        <div class="staff-card-info">
+          <h6>Everest Three Passes Training Expedition – Nepal</h6>
+          <p><strong>Location:</strong> Khumbu Region, Nepal<br><strong>Duration:</strong> 21 days<br><strong>Achievement:</strong> Team successfully reached Everest Base Camp.</p>
+          <p>A 2026 expedition team undertook a demanding Himalayan trekking challenge across the Everest region. Severe weather and environmental risks required the team to change its original route. Through careful planning, teamwork and disciplined decision-making, participants adapted their journey and successfully reached Everest Base Camp at 5,364 metres.</p>
+          <p><strong>Key outcomes:</strong> Adaptability, resilience, high-altitude experience and responsible decision-making.</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <article class="staff-card blog-card success-story-card" tabindex="0">
+        <img src="videos/organization-mount-logan-expedition.png" class="staff-card-image" alt="Mountaineering team at a snowy high-altitude camp">
+        <div class="staff-card-info">
+          <h6>Mount Logan Leadership Expedition – Yukon, Canada</h6>
+          <p><strong>Location:</strong> Saint Elias Mountains, Yukon, Canada<br><strong>Team:</strong> 12 participants<br><strong>Achievement:</strong> Leadership and teamwork objectives achieved.</p>
+          <p>In May 2025, a 12-member expedition travelled to the Saint Elias Mountains to attempt Mount Logan, Canada's highest peak. Extreme weather prevented the team from reaching the summit. However, the expedition became a valuable learning experience, developing leadership, courage, teamwork and the ability to respond to difficult mountain conditions.</p>
+          <p><strong>Key outcomes:</strong> Risk awareness, team coordination, resilience and responsible expedition planning.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- Organization Camps Success Stories End -->
+  <!-- Location Start -->
+<h3 class="mt-5"><center> <u style="color: #163D2B;">GEO LOCATION API</u></center></h3>
+<div class="container mt-4">
+  <p class="text-center">Explore live Google Maps views of four famous mountain locations.</p>
+  <div class="d-flex flex-wrap justify-content-center gap-2 mb-3" role="group" aria-label="Choose a mountain to view">
+    <button class="btn btn-success mountain-map-button active" type="button" data-name="K2" data-lat="35.8808" data-lng="76.5158" aria-pressed="true">K2</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Mount Everest" data-lat="27.9881" data-lng="86.9250" aria-pressed="false">Mount Everest</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Denali" data-lat="63.0695" data-lng="-151.0074" aria-pressed="false">Denali</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Aconcagua" data-lat="-32.6532" data-lng="-70.0109" aria-pressed="false">Aconcagua</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Kangchenjunga" data-lat="27.7025" data-lng="88.1475" aria-pressed="false">Kangchenjunga</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Mount Kilimanjaro" data-lat="-3.0674" data-lng="37.3556" aria-pressed="false">Mount Kilimanjaro</button>
+    <button class="btn btn-outline-success mountain-map-button" type="button" data-name="Mont Blanc" data-lat="45.8326" data-lng="6.8652" aria-pressed="false">Mont Blanc</button>
+  </div>
+  <p id="mountainMapStatus" class="text-center" aria-live="polite">Showing K2, Pakistan.</p>
+  <iframe id="map" title="Google Map showing K2, Pakistan" src="https://www.google.com/maps?q=35.8808,76.5158&amp;z=8&amp;output=embed" width="100%" height="450" style="border: 0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+  
+
+<div class="container">
+    <hr>
+</div>
+
+<!-- GEO LOCATION API END -->
+
+<!-- Location End -->
+ <!-- Blog Start -->
+<h1><center style="color:#163D2B" > <u style="color: #163D2B;" id="blogs" >ALPINE ASCENTS BLOG</u></center></h1>
+<div class="container">
+  <div class="row g-3">
+    <div class="col-12 col-md-4">
+      <article class="staff-card blog-card" tabindex="0">
+        <img src="videos/blog-alex-morgan.png" class="staff-card-image" alt="Alex Morgan photographing a mountain expedition">
+        <div class="staff-card-info">
+          <h6>Alex Morgan</h6>
+          <p><strong>About the Blog:</strong> This blog shares exciting mountain expedition stories, famous climbing destinations, trekking experiences and breathtaking mountain photography. It guides readers through different adventures while exploring the beauty and challenges of the world's highest peaks.</p>
+          <p><strong>Featured article:</strong> Journey to the Top of Everest</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="staff-card blog-card" tabindex="0">
+        <img src="videos/blog-emily-carter.png" class="staff-card-image" alt="Emily Carter enjoying a scenic mountain hike">
+        <div class="staff-card-info">
+          <h6>Emily Carter</h6>
+          <p><strong>About the Blog:</strong> This blog explores beautiful mountain destinations, scenic hiking trails, travel guides and outdoor experiences. It provides readers with useful travel tips, destination recommendations and inspiration for planning their next mountain adventure.</p>
+          <p><strong>Featured article:</strong> Discovering the Beauty of the Swiss Alps</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="staff-card blog-card" tabindex="0">
+        <img src="videos/blog-danie-brook.png" class="staff-card-image" alt="Danie Brook climbing a snowy mountain">
+        <div class="staff-card-info">
+          <h6>Danie Brook</h6>
+          <p><strong>About the Blog:</strong> This blog focuses on mountaineering knowledge, climbing techniques, survival skills, safety equipment and high-altitude challenges. It helps readers understand mountain hazards, prepare for difficult expeditions and develop essential climbing skills.</p>
+          <p><strong>Featured article:</strong> Essential Survival Skills Every Mountaineer Needs</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- Blog End -->
+<!-- Organization Clubs Start -->
+<section class="organization-clubs-section" aria-labelledby="organization-clubs">
+  <h1><center><u id="organization-clubs">ORGANIZATION CLUBS</u></center></h1>
+  <div class="container">
+    <p class="organization-clubs-intro">Meet the organizations helping people explore, learn and climb in Pakistan's mountains.</p>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="staff-card blog-card club-card" tabindex="0">
+          <img src="videos/blog-alex-morgan.png" class="staff-card-image" alt="Alpine Club of Pakistan expedition team on a mountain summit">
+          <div class="staff-card-info">
+            <h6>Alpine Club of Pakistan</h6>
+            <p><strong>About:</strong> Pakistan's national mountaineering organization, supporting climbing, trekking and mountain education.</p>
+            <p><strong>Location:</strong> Room 123, Jinnah Stadium, Pakistan Sports Complex, Islamabad</p>
+            <button class="btn btn-outline-light club-map-button" type="button" data-location="Alpine Club of Pakistan, Room 123 Jinnah Stadium, Pakistan Sports Complex, Islamabad, Pakistan" aria-controls="club-map" aria-expanded="false">Show map</button>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="staff-card blog-card club-card" tabindex="0">
+          <img src="videos/organization-qaqlasht-winter-camp.png" class="staff-card-image" alt="Trekkers exploring the mountains near Chitral">
+          <div class="staff-card-info">
+            <h6>Qashqar Trekkers Base</h6>
+            <p><strong>Location:</strong> Balach, Chitral, Pakistan</p>
+            <p><strong>Type:</strong> Hiking and trekking club</p>
+            <p><strong>Activities:</strong> Mountain trekking, route exploration, photography and youth adventure activities.</p>
+            <button class="btn btn-outline-light club-map-button" type="button" data-location="Qashqar Trekkers Base, Balach, Chitral, Pakistan" aria-controls="club-map" aria-expanded="false">Show map</button>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="staff-card blog-card club-card" tabindex="0">
+          <img src="videos/program-alpine-climbing.png" class="staff-card-image" alt="Outdoor climbing training on a rock face">
+          <div class="staff-card-info">
+            <h6>Adventure Foundation Pakistan</h6>
+            <p><strong>Location:</strong> Shakarparian, Islamabad, Pakistan</p>
+            <p><strong>Type:</strong> Outdoor education foundation</p>
+            <p><strong>Activities:</strong> Rock climbing, ice climbing, rope training, outdoor education and mountain rescue training.</p>
+            <button class="btn btn-outline-light club-map-button" type="button" data-location="Adventure Foundation Pakistan, Shakarparian, Islamabad, Pakistan" aria-controls="club-map" aria-expanded="false">Show map</button>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="staff-card blog-card club-card" tabindex="0">
+          <img src="videos/organization-everest-three-passes.png" class="staff-card-image" alt="A trekking group crossing a high mountain pass">
+          <div class="staff-card-info">
+            <h6>Pakistan Mountaineering Club</h6>
+            <p><strong>Location:</strong> Lahore, Pakistan</p>
+            <p><strong>Type:</strong> Mountaineering and adventure travel organization</p>
+            <p><strong>Activities:</strong> Guided treks, mountain expeditions, climbing logistics and northern Pakistan tours.</p>
+            <button class="btn btn-outline-light club-map-button" type="button" data-location="Pakistan Mountaineering Club, Lahore, Pakistan" aria-controls="club-map" aria-expanded="false">Show map</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="club-map-panel" class="club-map-panel" hidden>
+      <p id="clubMapStatus" class="text-center" role="status" aria-live="polite"></p>
+      <iframe id="club-map" title="Map showing selected club location" src="about:blank" width="100%" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <hr>
+  </div>
+</section>
+<!-- Organization Clubs End -->
+<!-- General Mountaineering Guidelines Start -->
+<section class="mountaineering-guidelines" aria-labelledby="mountaineering-guidelines-title">
+  <div class="container">
+    <div class="guidelines-panel">
+      <h2 id="mountaineering-guidelines-title">GENERAL MOUNTAINEERING GUIDELINES</h2>
+      <ol>
+        <li><strong>Physical Fitness</strong><span>Maintain good physical fitness through regular exercise, endurance training and strength workouts before attempting a mountain expedition.</span></li>
+        <li><strong>Proper Equipment</strong><span>Always carry suitable climbing equipment, including helmets, harnesses, ropes, gloves, boots and weather-resistant clothing.</span></li>
+        <li><strong>Weather Awareness</strong><span>Check weather forecasts before and during the expedition. Avoid climbing during storms, heavy snowfall or dangerous weather conditions.</span></li>
+        <li><strong>Follow Experienced Guides</strong><span>Always follow the instructions of qualified mountain guides, instructors and expedition leaders.</span></li>
+        <li><strong>Stay Hydrated</strong><span>Drink water regularly and maintain proper nutrition to keep your body energised during long climbs.</span></li>
+        <li><strong>Acclimatization</strong><span>Allow your body enough time to adjust to high altitudes. Climb gradually and avoid ascending too quickly.</span></li>
+        <li><strong>Team Coordination</strong><span>Stay together as a team, communicate clearly and support other climbers throughout the expedition.</span></li>
+        <li><strong>Emergency Preparation</strong><span>Carry a first-aid kit, emergency communication device, navigation tools and essential rescue equipment.</span></li>
+        <li><strong>Respect Nature</strong><span>Do not litter, damage vegetation or disturb wildlife. Follow environmentally responsible climbing practices.</span></li>
+        <li><strong>Know Your Limits</strong><span>Understand your physical abilities and never take unnecessary risks to reach a summit.</span></li>
+        <li><strong>Route Planning</strong><span>Study the climbing route, identify potential hazards and establish emergency meeting points before starting.</span></li>
+        <li><strong>Leave No Trace</strong><span>Take all waste back with you and leave mountain campsites clean for future visitors.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- General Mountaineering Guidelines End -->
+    <!-- contact us
+      program  start   -->
+<h1><center><u style="color: #163D2B; margin-top: 60px;">  Why Choose Alpine Ascents? </u>  </center>  </h1>
+      <div id="parent1">
+
+<div id="c1"><h4> <center style="margin-top: 20px; color: #A4B49A;" >ENVIRONMENTAL RESPONSIBILITY</center></h4><p style="color: #A4B49A; text-align: center; margin-top: 20px;">Leave No Trace principles are fundamental to our program, and we encourage all who climb and trek with us to understand proper wilderness practices. We help facilitate this effort by passing on Leave No Trace training and literature to every Alpine Ascents climber.</p> </div>
+<div id="c2"><h4> <center style="margin-top: 20px; color: #A4B49A;" >KNOWLEDGE & EXPERTISE</center></h4><p style="color: #A4B49A; text-align: center; margin-top: 20px;">Alpine Ascents International leads expeditions that have become benchmarks of quality in the climbing community. We operate what we believe is the finest mountaineering school in the country. This expertise is based upon years of accumulated experience-not just from individual mountain guides, but through experience on particular mountains where details are fine-tuned over time.</p> </div>
+<div id="c3"><h4><center style="margin-top: 20px; color: #A4B49A;" >GUIDE</center></h4><p style="color: #A4B49A; text-align: center; margin-top: 20px;">Our guides are an integral part of Alpine Ascents because they understand and share our climbing principles. These individuals are dedicated to sharing their excellence with others. Many of our guides have been with Alpine Ascents for over five years, with a handful of veterans working with us for most of their careers. The quality of our Guide Staff is the primary difference between us and our competitors.</p> </div>
+ <hr></div>
+<div class="container">
+<h5 style="margin-top: 50px; color: #163D2B;" >WHICH PROGRAM ARE YOU INTERESTED IN APPLYING FOR?</h5>
+  
+
+<div class="row g-3">
+  <div class="col-12 col-md-4">
+    <article class="staff-card" tabindex="0">
+      <img src="videos/program-himalayan-expedition.png" class="staff-card-image" alt="Mountaineers trekking through the Himalayas">
+      <div class="staff-card-info">
+        <h6>Himalayan Expedition Program</h6>
+        <p><strong>About the Program:</strong> This program offers an exciting opportunity to explore the Himalayas and experience high-altitude mountaineering. Participants learn expedition planning, mountain navigation, climbing techniques and altitude acclimatization under professional guidance.</p>
+        <ul class="program-details">
+          <li><strong>Duration:</strong> 14 Days</li>
+          <li><strong>Level:</strong> Advanced</li>
+          <li><strong>Location:</strong> Nepal</li>
+          <li><strong>Activities:</strong> High-altitude climbing, trekking and camping</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div class="col-12 col-md-4">
+    <article class="staff-card" tabindex="0">
+      <img src="videos/program-alpine-climbing.png" class="staff-card-image" alt="Climbers practicing alpine mountaineering">
+      <div class="staff-card-info">
+        <h6>Alpine Climbing Training</h6>
+        <p><strong>About the Program:</strong> This training program helps participants develop essential mountaineering skills through practical mountain activities. It focuses on rope handling, ice axe techniques, glacier travel, climbing safety and emergency procedures.</p>
+        <ul class="program-details">
+          <li><strong>Duration:</strong> 7 Days</li>
+          <li><strong>Level:</strong> Beginner to Intermediate</li>
+          <li><strong>Location:</strong> Swiss Alps</li>
+          <li><strong>Activities:</strong> Rock climbing, ice climbing and safety training</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div class="col-12 col-md-4">
+    <article class="staff-card" tabindex="0">
+      <img src="videos/program-mountain-survival.png" class="staff-card-image" alt="Mountain expedition camp surrounded by snowy peaks">
+      <div class="staff-card-info">
+        <h6>Mountain Survival &amp; Adventure Program</h6>
+        <p><strong>About the Program:</strong> This program teaches participants how to survive and stay safe in challenging mountain environments. It covers emergency shelter building, weather awareness, first aid, survival equipment and hazard management.</p>
+        <ul class="program-details">
+          <li><strong>Duration:</strong> 5 Days</li>
+          <li><strong>Level:</strong> Beginner</li>
+          <li><strong>Location:</strong> Austrian Alps</li>
+          <li><strong>Activities:</strong> Survival training, camping, navigation and emergency response</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</div>
+<hr>
+</div>
+  <!-- programs end -->
+   <!-- partners start -->
+<h3><center>  <u style="color: #163D2B;">PARTNERS & ACCREDITATIONS</u></center></h3>
+<div class="partner-logos">
+  
+<div><img src="videos/nf.png" alt="National federation partner"></div>
+<div><img src="videos/logo.png" alt="Accreditation partner"></div>
+ <hr> </div>
+<div class="container contact-section">
+  <!-- partners End -->
+   <!-- contact us start   -->
+  <h4 ><u style="margin-top: 30px;" id="contactus">CONTACT US:</u></h4>
+<div class="row">
+<div class="col-lg-8"><h4>CONTACT ALPINE ASCENTS Address:
+ <h4 style="margin-top: 30px;">ALPINE ASCENTS </h4>
+ <h4 style="margin-top: 30px;">valley, 67 street ,canada </h4>
+ <h4 style="margin-top: 30px;">Phone (92) 187-1986, fax: (92) 645-321</h4>
+
+ <h4 style="margin-top: 70px;">Office Hours: Monday - thursday - saturday from 9:00am - 5:00pm PST.
+ </h4>
+ <h4  style="margin-top: 20px;">Retail Store Hours: Monday – saturday 9:00am – 5:00pm PST.</h4>
+
+ <h4  style="margin-top: 20px;">Questions? Comments? Alpine3ascents.com
+</h4></div>
+<div class="col-lg-4">
+<h4 style="margin-top: 30px;">STAFF CONTACT INFO</h4>
+<h4 style="margin-top: 20px;">Director of Programs: <br>    Subhan, Subhan@AlpineAscents.com</h4>
+<h4 style="margin-top: 20px;">Director of Field Operations: junaid, jkhanSon@AlpineAscents.com</h4>
+</div>
+</div>
+</div>
+
+<!-- contact us End -->
+
+ <!-- footer start -->
+  <div><img class="footer-banner" src="videos/footer3.png" alt="Alpine Ascents mountain landscape"></div>
+<footer>
+  <div class="footer-content"><div class="footer-socials" aria-label="Social media"><i class="fa fa-facebook-f" aria-hidden="true"></i><i class="fa fa-instagram" aria-hidden="true"></i><i class="fa fa-twitter" aria-hidden="true"></i></div><p>&copy; 2026 Alpine Ascents. All rights reserved.</p></div>
+  <div class="info-ticker" role="region" aria-label="Current date, time, and location">
+    <div class="info-ticker-track" aria-hidden="true">
+      <span id="tickerMessage">Date: — &nbsp; | &nbsp; Time: — &nbsp; | &nbsp; Location: Pakistan</span>
+      <span id="tickerMessageCopy">Date: — &nbsp; | &nbsp; Time: — &nbsp; | &nbsp; Location: Pakistan</span>
+    </div>
+    <span id="tickerAccessible" class="visually-hidden" aria-live="polite">Date and time loading. Location: Pakistan.</span>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
